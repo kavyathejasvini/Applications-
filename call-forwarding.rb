@@ -55,10 +55,10 @@ post '/ivr' do
 
     digits = params[:Digits]
     
-    #call will forwarded to user1
+    #call will be forwarded to user1
    if digits == '1'
   
-        play_loop = 1
+            play_loop = 1
   	    lang = "en-US"
   	    voice = "WOMAN"
   	    text = "Dialling User1"
@@ -79,7 +79,8 @@ post '/ivr' do
     
    #call will be forwarded to user2
    elsif digits == '2'
-	      play_loop = 1
+	
+	play_loop = 1
         lang = "en-US"
         voice = "WOMAN"
         text = "Dialling User2"
