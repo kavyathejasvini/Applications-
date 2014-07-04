@@ -118,8 +118,8 @@ post '/ivr' do
 
 
   else
-	      text = "Invalid Option Selected, Please Hangup and try again"
-	      play_loop = 1
+	text = "Invalid Option Selected, Please Hangup and try again"
+	play_loop = 1
         lang = "en-US"
         voice = "WOMAN"
 
