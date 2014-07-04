@@ -69,12 +69,12 @@ post '/ivr' do
   	                'voice' => voice,
   	                   }
 	      speak = Plivo::Speak.new(WELC OME_MESSAGE, speak_params) 
-   	    num_add = Plivo::Number.new(user1)
-        dial = Plivo::Dial.new()
-        dial.add(num_add)
-        response = Plivo::Response.new()
+   	      num_add = Plivo::Number.new(user1)
+              dial = Plivo::Dial.new()
+              dial.add(num_add)
+              response = Plivo::Response.new()
 	      response.add(speak)
-        response.add(dial)
+              response.add(dial)
 	      return response.to_xml
     
    #call will be forwarded to user2
@@ -89,7 +89,7 @@ post '/ivr' do
                         'language' => lang,
                         'voice' => voice,
                         }
-        speak = Plivo::Speak.new(WELCOME_MESSAGE, speak_params)
+        speak = Plivo::Speak.new(text, speak_params)
         num_add = Plivo::Number.new(user2)
         dial = Plivo::Dial.new()
         dial.add(num_add)
