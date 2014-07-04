@@ -132,8 +132,8 @@ post '/ivr' do
                         'voice' => voice,
                         }
         speak = Plivo::Speak.new(text, speak_params)
-	      response = Plivo::Response.new()
+	response = Plivo::Response.new()
         response.add(speak)
-	      return response.to_xml	
+	return response.to_xml	
   end
 end
