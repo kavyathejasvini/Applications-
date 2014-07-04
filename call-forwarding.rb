@@ -17,7 +17,8 @@ AUTH_TOKEN = " "
 get '/ivr' do
     
     #This will get the account details of the user
-    p = Plivo.RESTAPI(AUTH_ID, AUTH_TOKEN)
+    
+    p = RestAPI.new(AUTH_ID, AUTH_TOKEN)
     response = p.get_account()
     
     
