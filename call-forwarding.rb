@@ -19,7 +19,9 @@ get '/ivr' do
     #This will get the account details of the user
     p = Plivo.RESTAPI(AUTH_ID, AUTH_TOKEN)
     response = p.get_account()
-
+    
+    
+    #Call forwarding app for the new Plivo User with the Input Design
     WELCOME_MESSAGE = "Welcome to IVR Menu. Press 1 to call User1. Press 2 to call User2 "
     NO_INPUT_MESSAGE = "No Input received."
     play_loop = 1
@@ -47,7 +49,7 @@ get '/ivr' do
     return response.to_xml
 end
 
-
+#This piece of code is for the output response to be generated for the input requests provided by the user
 post '/ivr' do
     
     user1 = 'XXXXXXXXXX1'
